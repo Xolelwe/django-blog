@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head><title>{{ post.title }}</title></head>
+<body>
+  <h1>{{ post.title }}</h1>
+  <p><em>Published: {{ post.created_at|date:"d M Y H:i" }}</em></p>
+  <div>
+    <p>{{ post.body|linebreaks }}</p>
+  </div>
+  <p><a href="{% url 'blog:index' %}">Back to list</a></p>
+</body>
+</html>
